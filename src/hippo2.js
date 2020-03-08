@@ -1,4 +1,4 @@
-export class Hippo {
+export class Hippo2 {
   constructor(name) {
     this.name = name;
     this.healthLevel = 100;
@@ -17,13 +17,13 @@ export class Hippo {
   setHealth() {
     setInterval(() => {
       this.healthLevel -=1;
-    }, 60000);
+    }, 1000);
   }
 
   setHunger() {
     setInterval(() => {
       this.hungerLevel += 1;
-    }, 20000);
+    }, 1000);
   }
   // didYouGetSick() {
   //   if (this.foodLevel > 0) {
@@ -33,9 +33,9 @@ export class Hippo {
   //   }
   // }
 
-  feed() {
-    this.foodLevel = 10;
-  }
+  // feed() {
+  //   this.foodLevel = 10;
+  // }
 
   
 }
