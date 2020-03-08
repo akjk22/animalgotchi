@@ -13,7 +13,12 @@ export class Hippo2 {
         this.isSick = true; 
       }
     }, 1000);
-  }
+    setInterval(() => {
+      if (this.hungerLevel <= 0) {
+        this.hasPooped = true;
+        }
+      }, 1000);
+    }
 
   setHealth() {
     setInterval(() => {
