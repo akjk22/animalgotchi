@@ -25,6 +25,11 @@ export class Hippo2 {
       this.hungerLevel += 1;
     }, 1000);
   }
+
+  feed() {
+    this.hungerLevel -= 5;
+    }
+  }
   // didYouGetSick() {
   //   if (this.foodLevel > 0) {
   //     return false;
@@ -33,9 +38,5 @@ export class Hippo2 {
   //   }
   // }
 
-  // feed() {
-  //   this.foodLevel = 10;
-  // }
 
   
-}

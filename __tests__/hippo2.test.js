@@ -9,6 +9,7 @@ describe('Duke', () => {
     duke.setHunger();
     duke.setHealth();
     duke.checkEverySecond();
+    
   });
 
   afterEach(function() {
@@ -40,6 +41,11 @@ describe('Duke', () => {
     expect(duke.hungerLevel).toEqual(11);
   });
 
+  test(`has feed method that decreases hungerLevel by 5`, () => {
+    duke.feed();
+    expect(duke.hungerLevel).toEqual(5);
+  });
+  
   // test(`should get sick if hungerLevel is greater than or equal to 20`, () => {
   //   jest.advanceTimersByTime(500001);
   //   expect(duke.isSick).toEqual(true);
