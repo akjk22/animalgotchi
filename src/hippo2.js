@@ -4,6 +4,7 @@ export class Hippo2 {
     this.healthLevel = 100;
     this.hungerLevel = 10;
     this.isSick = false;
+    this.hasPooped = false;
   }
 
   checkEverySecond() {
@@ -30,6 +31,8 @@ export class Hippo2 {
     this.hungerLevel -= 5;
     }
   }
+
+  
   // didYouGetSick() {
   //   if (this.foodLevel > 0) {
   //     return false;

@@ -45,6 +45,13 @@ describe('Duke', () => {
     duke.feed();
     expect(duke.hungerLevel).toEqual(5);
   });
+
+  test(`should have a boolean hasPooped property with a default value of false`, () => {
+    expect(duke.hasPooped).toEqual(false);
+  });
+  // test(`test if hungerLevel is less than equal to zero, then animal has pooped.`, () => {
+   
+  // });
   
   // test(`should get sick if hungerLevel is greater than or equal to 20`, () => {
   //   jest.advanceTimersByTime(500001);
