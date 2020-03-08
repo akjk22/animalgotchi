@@ -1,7 +1,7 @@
-export class HungryBear {
+export class Hippo {
   constructor(name) {
     this.name = name;
-    this.foodLevel = 10;
+    this.healthLevel = 100;
   }
   setHunger() {
     setInterval(() => {
@@ -9,7 +9,7 @@ export class HungryBear {
     }, 1000);
   }
 
-  didYouGetEaten() {
+  didYouGetSick() {
     if (this.foodLevel > 0) {
       return false;
     } else {
@@ -20,4 +20,6 @@ export class HungryBear {
   feed() {
     this.foodLevel = 10;
   }
+
+  
 }
