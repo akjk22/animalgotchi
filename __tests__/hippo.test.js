@@ -1,25 +1,28 @@
 import { Hippo } from './../src/hippo.js';
 
 describe('Daisy', () => {
-  // jest.useFakeTimers();
+  jest.useFakeTimers();
   let daisy;
 
   beforeEach(function() {
     daisy = new Hippo('Daisy');
     // daisy.setHunger();
+    daisy.setHealth();
   });
 
-  // afterEach(function() {
-  //   jest.clearAllTimers();
-  // });
+  afterEach(function() {
+    jest.clearAllTimers();
+  });
 
   test(`should have a name and a health level of 10 when created`, () => {
     expect(daisy.name).toEqual('Daisy');
     expect(daisy.healthLevel).toEqual(100);
   });
 
-  test(`should show health decreasing by 1 `)
-
+  test(`should show health decreasing by 1 every second`, () => {
+    jest.advanceTimersByTime(1001);
+    expect(daisy.healthLevel).toEqual(99);
+  });
   // test('should have a food level of 7 after 3001 milliseconds', () => {
   //   jest.advanceTimersByTime(3001);
   //   expect(daisy.healthLevel).toEqual(7);
