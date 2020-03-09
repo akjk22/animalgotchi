@@ -22,4 +22,3 @@ _Idea: stats show on hover_
     * Have a health bar that shows green/yellow/etc 
 
 ## Design Elements: 
-  
