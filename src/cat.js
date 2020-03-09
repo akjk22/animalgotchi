@@ -42,7 +42,7 @@ export class Cat {
     this.feedCount += 1;
   }
 
-  /* PLAYWITH: If an animal has excess energy (over 100) the playWith method resets them to baseline (100), and returns true (use this to display a "success" type message to user). Otherwise, it returns false (return something like, "${name} is too tired to play" to the user). */
+  // PLAYWITH: If an animal has excess energy (over 100) the playWith method resets them to baseline (100), and returns true (use this to display a "success" type message to user). Otherwise, it returns false (return something like, "${name} is too tired to play" to the user).
   play() {
     if (this.energy > 100) {
       this.energy = 100;
@@ -52,6 +52,7 @@ export class Cat {
     }
   }
 
+  //Same logic as play(), just inverted
   nap() {
     if (this.energy < 100) {
       this.energy = 100;
