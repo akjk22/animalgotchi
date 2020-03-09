@@ -12,5 +12,11 @@ export class Cat {
       this.hunger += 1;
     }, 20000);
   }
+
+  decreaseEnergy() {
+    setInterval(() => {
+      this.energy -= 1;
+    }, 10000);
+  }
   
 }

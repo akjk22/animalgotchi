@@ -8,6 +8,7 @@ describe('Cat', () => {
   beforeEach(function() {
     jerome = new Cat('Jerome');
     jerome.increaseHunger();
+    jerome.decreaseEnergy();
   });
 
   afterEach(function() {
