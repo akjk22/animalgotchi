@@ -37,9 +37,16 @@ describe('Cat', () => {
   });
   
   test(`should have a feed method that decreases hunger by 1`, () => {
-    // jest.advanceTimersByTime(1001);
     jerome.feed();
     expect(jerome.hunger).toEqual(-1);
+  });
+
+  // Appears to be redundant test, but I wanted to make sure that the timers didn't mess this function up somehow
+  test(`feed method should work, even after increaseHunger method has been run`, () => {
+    jest.advanceTimersByTime(20001);
+    expect(jerome.hunger).toEqual(1);
+    jerome.feed();
+    expect(jerome.hunger).toEqual(0);
   });
 
 
