@@ -19,4 +19,7 @@ export class Cat {
     }, 10000);
   }
   
+  feed() {
+    this.hunger -= 1;
+  }
 }

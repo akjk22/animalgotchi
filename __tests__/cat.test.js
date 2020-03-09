@@ -36,4 +36,11 @@ describe('Cat', () => {
     expect(jerome.energy).toEqual(99);
   });
   
+  test(`should have a feed method that decreases hunger by 1`, () => {
+    // jest.advanceTimersByTime(1001);
+    jerome.feed();
+    expect(jerome.hunger).toEqual(-1);
+  });
+
+
 });
