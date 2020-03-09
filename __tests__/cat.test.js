@@ -49,5 +49,21 @@ describe('Cat', () => {
     expect(jerome.hunger).toEqual(0);
   });
 
+  test(`feed method also adds +10 to energy`, () => {
+    jerome.feed();
+    expect(jerome.energy).toEqual(110);
+    jerome.feed();
+    jerome.feed();
+    expect(jerome.energy).toEqual(130);
+  });
+
+  // test(`has a playWith method that resets their energy to 100, if it's over 100`, () => {
+  //   jest.advanceTimersByTime()
+  // });
+
+  // test(`Has a nap method that resets energy to 100, if it is below 100`, () => {
+
+  // });
+
 
 });
