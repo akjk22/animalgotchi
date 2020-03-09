@@ -9,6 +9,7 @@ describe('Cat', () => {
     jerome = new Cat('Jerome');
     jerome.increaseHunger();
     jerome.decreaseEnergy();
+    // jerome.checkIfPooped();
   });
 
   afterEach(function() {
@@ -66,8 +67,14 @@ describe('Cat', () => {
     expect(jerome.feedCount).toEqual(3);
   });
 
-  test(`has a checkFeedCount method that runs every 5 seconds, and returns foodCount property`, () => {
-
+  test(`has a checkIfPooped method that runs every second, and monitors/returns foodCount property`, () => {
+    jerome.feed();
+    jest.advanceTimersByTime(1001);
+    expect(jerome.checkIfPooped()).toEqual(1);
+    jerome.feed();
+    jerome.feed();
+    jest.advanceTimersByTime(1001);
+    expect(jerome.checkIfPooped()).toEqual(3);
   });
 
   test(`if feedCount is evenly divisible by 5, hasPooped should equal true. checkFeedCount method should see to this`, () => {
