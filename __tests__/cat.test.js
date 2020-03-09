@@ -1,8 +1,8 @@
 /* eslint-disable no-undef */
-import { Cat } from './../cat.js';
+import { Cat } from './../src/cat';
 
 describe('Cat', () => {
-  jest.userFakeTimers();
+  jest.useFakeTimers();
   let jerome;
 
   beforeEach(function() {
