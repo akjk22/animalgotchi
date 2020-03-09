@@ -78,14 +78,12 @@ describe('Cat', () => {
     expect(jerome.hasPooped).toEqual(true);
   });
 
-  test(`if feedCount is evenly divisible by 5, hasPooped should equal true. checkFeedCount method should make this happen`, () => {
-
+  test(`has a playWith method that resets their energy to 100, if it's over 100`, () => {
+    jerome.feed();
+    expect(jerome.energy).toEqual(110);
+    jerome.play();
+    expect(jerome.energy).toEqual(100);
   });
-
-
-  // test(`has a playWith method that resets their energy to 100, if it's over 100`, () => {
-  //   jest.advanceTimersByTime()
-  // });
 
   // test(`Has a nap method that resets energy to 100, if it is below 100`, () => {
 
