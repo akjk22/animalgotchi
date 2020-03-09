@@ -7,4 +7,10 @@ export class Cat {
     this.hasPooped = false;
   }
 
+  increaseHunger() {
+    setInterval(() => {
+      this.hunger += 1;
+    }, 20000);
+  }
+  
 }
