@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import { Hippo } from './../src/hippo.js';
 
 describe('Daisy', () => {
