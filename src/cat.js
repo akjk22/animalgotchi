@@ -8,6 +8,8 @@ export class Cat {
     this.hasPooped = false;
   }
 
+  /* TIMED METHODS */
+
   //Every 20 seconds, hunger method increases by 1
   increaseHunger() {
     setInterval(() => {
@@ -21,8 +23,19 @@ export class Cat {
       this.energy -= 1;
     }, 10000);
   }
+
+  /* TIMED MONITORING METHODS */
+
+  // If animal has been fed 5 times, hasPooped should be true
+  checkIfPooped() {
+    setInterval(() => {
+      if (this.feedCount % 5 === 0) {
+        this.hasPooped = true;
+      }
+    }, 1000);
+  }
   
-  //User triggered methods: 
+  /* MANUALLY TRIGGERED METHODS */
   feed() {
     this.hunger -= 1;
     this.energy += 10;
