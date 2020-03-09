@@ -21,5 +21,6 @@ export class Cat {
   
   feed() {
     this.hunger -= 1;
+    this.energy += 10;
   }
 }
