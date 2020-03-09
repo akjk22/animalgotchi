@@ -19,8 +19,14 @@ describe('Cat', () => {
   });
 
   test(`should have hunger, hasPooped, and energy properties, each with a default value`, () => {
-    expect(jerome.hunger).toEqual(10);
+    expect(jerome.hunger).toEqual(0);
     expect(jerome.hasPooped).toEqual(false);
     expect(jerome.energy).toEqual(100);
   });
+
+  test(`should have a method that increases hunger every 20 seconds`, () => {
+    jest.advanceTimersByTime(200001);
+    expect(jerome.hunger).toEqual(1);
+  });
+  
 });
