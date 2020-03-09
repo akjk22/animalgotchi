@@ -7,6 +7,7 @@ describe('Cat', () => {
 
   beforeEach(function() {
     jerome = new Cat('Jerome');
+    jerome.increaseHunger();
   });
 
   afterEach(function() {
@@ -25,8 +26,13 @@ describe('Cat', () => {
   });
 
   test(`should have a method that increases hunger every 20 seconds`, () => {
-    jest.advanceTimersByTime(200001);
+    jest.advanceTimersByTime(20001);
     expect(jerome.hunger).toEqual(1);
+  });
+
+  test(`should have a method that decreases energy level every ten seconds`, () => {
+    jest.advanceTimersByTime(10001);
+    expect(jerome.energy).toEqual(99);
   });
   
 });
