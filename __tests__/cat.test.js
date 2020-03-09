@@ -57,6 +57,24 @@ describe('Cat', () => {
     expect(jerome.energy).toEqual(130);
   });
 
+  test(`has a feedCount method that starts at 0. feed method increments feedCount property by 1`, () =>{
+    expect(jerome.feedCount).toEqual(0);
+    jerome.feed();
+    expect(jerome.feedCount).toEqual(1);
+    jerome.feed();
+    jerome.feed();
+    expect(jerome.feedCount).toEqual(3);
+  });
+
+  test(`has a checkFeedCount method that runs every 5 seconds, and returns foodCount property`, () => {
+
+  });
+
+  test(`if feedCount is evenly divisible by 5, hasPooped should equal true. checkFeedCount method should see to this`, () => {
+
+  });
+
+
   // test(`has a playWith method that resets their energy to 100, if it's over 100`, () => {
   //   jest.advanceTimersByTime()
   // });
