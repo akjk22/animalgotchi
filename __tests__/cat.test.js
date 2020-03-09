@@ -78,16 +78,19 @@ describe('Cat', () => {
     expect(jerome.hasPooped).toEqual(true);
   });
 
-  test(`has a playWith method that resets their energy to 100, if it's over 100`, () => {
+  test(`has a play method that resets their energy to 100, if it's over 100`, () => {
     jerome.feed();
     expect(jerome.energy).toEqual(110);
     jerome.play();
     expect(jerome.energy).toEqual(100);
   });
 
-  // test(`Has a nap method that resets energy to 100, if it is below 100`, () => {
-
-  // });
+  test(`Has a nap method that resets energy to 100, if it is below 100`, () => {
+    jest.advanceTimersByTime(30001);
+    expect(jerome.energy).toEqual(97);
+    jerome.nap();
+    expect(jerome.energy).toEqual(100);
+  });
 
 
 });
