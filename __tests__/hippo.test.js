@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import { Hippo } from './../src/hippo.js';
 
 describe('Daisy', () => {
@@ -35,7 +36,15 @@ describe('Daisy', () => {
   });
 
   test(`should get sick if hungerLevel is greater than or equal to 20`, () => {
-    jest.advanceTimersByTime(500001);
+    daisy.hungerLevel = 25;
+    jest.advanceTimersByTime(1001);
+    expect(daisy.isSick).toEqual(true);
+  });
+
+  test(`should get sick if hungerLevel is less than or equal to 0`, () => {
+    daisy.hungerLevel = -5;
+    expect(daisy.hungerLevel).toEqual(-5);
+    jest.advanceTimersByTime(1001);
     expect(daisy.isSick).toEqual(true);
   });
 

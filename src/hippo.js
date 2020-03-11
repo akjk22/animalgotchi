@@ -11,6 +11,9 @@ export class Hippo {
       if (this.hungerLevel >= 20) { 
         this.isSick = true; 
       }
+      if (this.hungerLevel <= 0) {
+        this.isSick = true;
+      }
     }, 1000);
   }
 
