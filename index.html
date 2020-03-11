@@ -7,7 +7,7 @@
     <!-- Semantic CSS -->
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script> -->
     <link href="https://fonts.googleapis.com/css?family=Lora|Quicksand&display=swap" rel="stylesheet">
 
     <!-- jQuery CDN -->
@@ -22,9 +22,8 @@
     <div class="sub header">Choose an animal to be your best friend</div>
   </h1>
 <!-- <div class="ui segment"> -->
-<div class="ui form container" id="form-container">
-  <form>
-    <!-- User information  -->
+<!-- <div class="ui form container" id="form-container"> -->
+  <!-- <form>
     <div class="three fields">
       <div class="field">
         <label>Pick an Animal</label>
@@ -39,7 +38,7 @@
           <option value="health">Health</option>
           <option value="hunger">Hunger Level</option>
         </select>
-      </div>
+      </div> -->
       <!-- <div class="field">
         <label>Name</label>
         <input type="text" id="name" placeholder="First Name" value="Valerie">
@@ -49,17 +48,26 @@
         <input type="number" id="userAge" min=1 max=115 value=25>
       </div>
      -->
-    </div>
+    <!-- </div>
   </div>
     <h4>Choose an action</h4>
     <button type="submit" id="feedButton" class="ui button blue">Feed</button>
     <button type="submit" id="restButton" class="ui button blue">Rest</button>
     <button type="submit" id="walkButton" class="ui button blue">Walk</button>
-  </form>
+  </form> -->
+  <div class="ui raised segment container" id="jerryStats">
+      <h3>Jerry</h3>
+      <div id="hunger">
+        <h5>Hunger Level: <span id="hunger-level"></span></h5>
+      </div><br>
+      <button type="button" id="feedJerry" class="ui button blue">Feed</button>
+    </div>
 </div>
+
 </div>
-<div id="results" style="color: black;">
+<div id="results">
 </div>
+
 <script type="text/javascript" src="bundle.js"></script>
-<script type="text/javascript" src="bundle.js"></script></body>
+</body>
 </html>

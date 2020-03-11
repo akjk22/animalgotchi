@@ -1,31 +1,16 @@
-import { Hippo2 } from './hippo2';
+import { Animal } from './animal';
 import $ from 'jquery';
 import './styles.css';
 
-
-
-
-const hippo = new Hippo2("Jerry");
-
-
+// eslint-disable-next-line no-unused-vars
+const hippo = new Animal("Jerry", "hippo");
 
 $(document).ready(function() {
-  // // $("form").submit(function(event) {
-  // //   event.preventDefault();
-  // //   /* Gather input from drop down menu */
- 
-  // //   let hippo = $("select#animal").val();
-  // //     /* Return the calculated data back to the user */
 
-  // //     $("#results").text(); {
-  // //       animalSelection.show();
-  // //     }
-  // });
-  $("#hunger-level").text(hippo.hungerLevel);
-  $("#feed").click(function () {
-    hippo.feed();
-    $("#hunger-level").text(hippo.hungerLevel);
-  });
+  $("button#feedJerry").click(function() {
 
+
+    
+  });  
 
 });
