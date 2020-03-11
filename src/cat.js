@@ -1,8 +1,9 @@
-export class Cat {
-  constructor(name) {
+export class Animal {
+  constructor(name, species) {
     this.name = name;
+    this.species = species;
     this.energy = 100;
-    this.healthLevel = 100;
+    // this.healthLevel = 100;
     this.hunger = 0;
     this.feedCount = 0;
     this.hasPooped = false;
@@ -35,6 +36,7 @@ export class Cat {
     }, 1000);
   }
   
+ 
   /* MANUALLY TRIGGERED METHODS */
   feed() {
     this.hunger -= 1;
