@@ -5,30 +5,27 @@ import './styles.css';
 
 
 
-let hippo = new Hippo2();
-      hippo.setHealth(100);
-      hippo.setHunger(10);
-    
+const hippo = new Hippo2("Jerry");
+
+
 
 $(document).ready(function() {
-
-  $("form").submit(function(event) {
-    event.preventDefault();
-    /* Gather input from drop down menu */
+  // // $("form").submit(function(event) {
+  // //   event.preventDefault();
+  // //   /* Gather input from drop down menu */
  
-    let animalSelection = $("select#animal").val();
-    
+  // //   let hippo = $("select#animal").val();
+  // //     /* Return the calculated data back to the user */
 
-     
-      /* Return the calculated data back to the user */
-
-      $("#results").text(); {
-        animalSelection.show();
-  
-    
-      }
-
-
+  // //     $("#results").text(); {
+  // //       animalSelection.show();
+  // //     }
+  // });
+  $("#hunger-level").text(hippo.hungerLevel);
+  $("#feed").click(function () {
+    hippo.feed();
+    $("#hunger-level").text(hippo.hungerLevel);
   });
+
 
 });
